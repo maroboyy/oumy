@@ -248,6 +248,7 @@ function shareIt(p) {
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  /* ── AUDIO ── */
   const audio = document.getElementById("bgAudio");
 
   function startAudio() {
@@ -262,10 +263,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener("click", startAudio);
   document.addEventListener("touchstart", startAudio);
 
-});
-
-/* ── INIT ── */
-document.addEventListener('DOMContentLoaded', () => {
+  /* ── INIT ── */
   initConfetti();
   initSparkles();
   initCounter();
@@ -275,4 +273,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initWall();
   initCandle();
   initScrollAnim();
+
 });
