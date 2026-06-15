@@ -226,20 +226,5 @@
 
   <script src="script.js" defer></script>
 </footer>
-    <script>
-const audio = document.getElementById("bgAudio");
-
-function startAudio() {
-    audio.play().catch(err => {
-        console.log("Autoplay blocked:", err);
-    });
-
-    document.removeEventListener("click", startAudio);
-    document.removeEventListener("touchstart", startAudio);
-}
-
-document.addEventListener("click", startAudio);
-document.addEventListener("touchstart", startAudio);
-</script>
 </body>
 </html>
