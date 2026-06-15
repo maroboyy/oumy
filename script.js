@@ -246,6 +246,20 @@ function shareIt(p) {
   const txt = encodeURIComponent('🎀 Happy Birthday Oumaima! Check out this birthday surprise 💜');
 }
 
+const audio = document.getElementById("bgAudio");
+
+function startAudio() {
+    audio.play().catch(err => {
+        console.log("Autoplay blocked:", err);
+    });
+
+    document.removeEventListener("click", startAudio);
+    document.removeEventListener("touchstart", startAudio);
+}
+
+document.addEventListener("click", startAudio);
+document.addEventListener("touchstart", startAudio);
+
 /* ── INIT ── */
 document.addEventListener('DOMContentLoaded', () => {
   initConfetti();
