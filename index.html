@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Happy Birthday Oumaima 🎀</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@300;400;600;700;800&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="confettiCanvas"></canvas>
+<audio id="bgAudio" autoplay loop>
+    <!-- <source src="asset/song.mpeg" type="audio/mpeg"> -->
+</audio>
+
+<!-- BALLOONS RIGHT -->
+<div class="balloon-cluster">
+<svg viewBox="0 0 260 380" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+  <ellipse cx="160" cy="90" rx="52" ry="62" fill="url(#b1)"/><ellipse cx="145" cy="72" rx="12" ry="18" fill="rgba(255,255,255,0.35)"/>
+  <path d="M160 152 Q158 170 155 190 Q152 210 156 240" stroke="#c9b8f5" stroke-width="1.5" fill="none" stroke-dasharray="4,3"/>
+  <ellipse cx="90" cy="130" rx="42" ry="50" fill="url(#b2)"/><ellipse cx="78" cy="115" rx="9" ry="13" fill="rgba(255,255,255,0.3)"/>
+  <path d="M90 180 Q88 200 84 220 Q80 240 83 265" stroke="#f7c5df" stroke-width="1.5" fill="none" stroke-dasharray="4,3"/>
+  <ellipse cx="190" cy="190" rx="35" ry="42" fill="url(#b3)"/><ellipse cx="180" cy="178" rx="7" ry="11" fill="rgba(255,255,255,0.3)"/>
+  <path d="M190 232 Q188 248 185 265 Q182 282 184 300" stroke="#e8d5ff" stroke-width="1.5" fill="none" stroke-dasharray="4,3"/>
+  <circle cx="160" cy="152" r="3.5" fill="#c9b8f5"/><circle cx="90" cy="180" r="3" fill="#f7c5df"/><circle cx="190" cy="232" r="3" fill="#e8d5ff"/>
+  <rect x="60" y="50" width="8" height="8" rx="2" fill="#f0a3c8" opacity=".6" transform="rotate(20 64 54)"/>
+  <rect x="200" y="30" width="6" height="6" rx="1.5" fill="#b896e8" opacity=".7" transform="rotate(-15 203 33)"/>
+  <circle cx="40" cy="170" r="4" fill="#fce4f0" opacity=".7"/>
+  <defs>
+    <radialGradient id="b1" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#dbbfff"/><stop offset="100%" stop-color="#9b5fd4"/></radialGradient>
+    <radialGradient id="b2" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#fcd8ee"/><stop offset="100%" stop-color="#e060a8"/></radialGradient>
+    <radialGradient id="b3" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#ede0ff"/><stop offset="100%" stop-color="#b896e8"/></radialGradient>
+  </defs>
+</svg>
+</div>
+
+<!-- BALLOONS LEFT -->
+<div class="balloon-cluster-left">
+<svg viewBox="0 0 180 280" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+  <ellipse cx="80" cy="80" rx="40" ry="48" fill="url(#lb1)"/><ellipse cx="70" cy="66" rx="9" ry="13" fill="rgba(255,255,255,0.3)"/>
+  <path d="M80 128 Q78 148 75 168 Q72 185 74 205" stroke="#f0a3c8" stroke-width="1.5" fill="none" stroke-dasharray="4,3"/>
+  <circle cx="80" cy="128" r="3" fill="#f0a3c8"/>
+  <ellipse cx="130" cy="140" rx="32" ry="38" fill="url(#lb2)"/><ellipse cx="121" cy="128" rx="7" ry="11" fill="rgba(255,255,255,0.3)"/>
+  <path d="M130 178 Q128 196 125 214 Q122 230 124 248" stroke="#c9b8f5" stroke-width="1.5" fill="none" stroke-dasharray="4,3"/>
+  <circle cx="130" cy="178" r="2.5" fill="#c9b8f5"/>
+  <rect x="20" y="40" width="7" height="7" rx="2" fill="#e060a8" opacity=".6" transform="rotate(-25 23 43)"/>
+  <circle cx="155" cy="50" r="4" fill="#b896e8" opacity=".7"/>
+  <defs>
+    <radialGradient id="lb1" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#fce4f0"/><stop offset="100%" stop-color="#e878b8"/></radialGradient>
+    <radialGradient id="lb2" cx="35%" cy="30%" r="65%"><stop offset="0%" stop-color="#ede0ff"/><stop offset="100%" stop-color="#a070d8"/></radialGradient>
+  </defs>
+</svg>
+</div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <span class="nav-logo">Oumaima 🎀</span>
+    <div class="nav-links">
+      <a href="#letter">Letter 💌</a>
+      <a href="#wishes">Wishes ✨</a>
+      <a href="#candle">Candle 🕯️</a>
+    </div>
+  </div>
+</nav>
+
+
+<!-- NOW PLAYING BAR -->
+<div class="now-playing" id="nowPlaying">
+  <span class="np-icon">🎵</span>
+  <div class="np-text">
+    <span id="npTitle">Your Song</span><br>
+    <span>Playing for Oumaima 💜</span>
+  </div>
+  <div class="np-controls">
+    <button class="np-btn" id="npToggle" title="Pause/Play">⏸</button>
+    <button class="np-btn" id="npClose" title="Stop">✕</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="sparkles" id="sparkles"></div>
+
+  <div class="hero-content fade-in visible">
+    <div class="hero-eyebrow">🎉 It's Your Special Day</div>
+
+    <!-- PHOTO UPLOAD -->
+    <div class="hero-photo-wrap" id="photoWrap" title="Tap to add her photo">
+      <div class="hero-photo-ring"></div>
+<div class="hero-photo-inner">
+    <img src="/asset/youngoumy.jpeg" alt="Oumaima">
+</div>
+      </div>
+    </div>
+
+    <div class="hero-tag">June 15 · 2026</div>
+    <h1 class="hero-title">Happy <span>Birthday</span></h1>
+    <h2 class="hero-name">Oumaima</h2>
+    <div class="hero-date-chip">
+      <span class="dot"></span>
+      Turning 24 today 🎂
+      <span class="dot"></span>
+    </div>
+    <p class="hero-sub">Today is all about you — your smile, your light, your magic. ✨</p>
+    <a href="#letter" class="hero-cta">Read Your Surprise 💌</a>
+  </div>
+
+  <div class="podium-wrap"><div class="podium"></div></div>
+  <div class="scroll-hint">
+    <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+    Scroll
+  </div>
+</section>
+
+<!-- SPECIAL MESSAGE -->
+<section class="special-msg-section" id="special">
+  <div class="section-inner">
+    <div class="special-msg-card fade-in">
+      <span class="special-msg-deco">💗</span>
+      <p class="special-msg-text">
+        "Leave the past where it belongs and focus on the beautiful moments happening right now — enjoy them, cherish them, and make the most of them."
+      </p>
+      <p class="special-msg-sig">LVY SM 💗✨</p>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE CAROUSEL -->
+<section class="quotes-band" id="quotes">
+  <div class="glass-card quotes-inner" id="quoteInner">
+    <div id="quoteDisplay">
+      <p class="quote-text" id="quoteText">"You are braver than you believe, stronger than you seem, and more loved than you know."</p>
+      <p class="quote-attr" id="quoteAttr">— A. A. Milne</p>
+    </div>
+    <div class="q-dots" id="quoteDots"></div>
+  </div>
+</section>
+
+<!-- COUNTDOWN -->
+<section class="section" id="countdown" style="padding-top:3rem;padding-bottom:3rem">
+  <div class="section-inner" style="text-align:center">
+    <p class="eyebrow">🌸 You've been amazing for</p>
+    <div class="countdown-grid fade-in">
+      <div class="countdown-box"><span class="cd-num" id="cdY">24</span><span class="cd-label">Years</span></div>
+      <div class="countdown-box"><span class="cd-num" id="cdM">0</span><span class="cd-label">Months</span></div>
+      <div class="countdown-box"><span class="cd-num" id="cdD">0</span><span class="cd-label">Days</span></div>
+      <div class="countdown-box"><span class="cd-num" id="cdH">2</span><span class="cd-label">Hours</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- LETTER -->
+<section class="section letter-section" id="letter">
+  <div class="section-inner">
+    <p class="eyebrow">💌 Words from the Heart</p>
+    <h2 class="section-title fade-in">A Letter Just for You</h2>
+    <div class="letter-card">
+      <div class="letter-deco">
+        <span class="letter-date">June 15, 2026</span>
+        <span>🌸</span>
+      </div>
+      <p class="letter-salutation">Dearest Oumaima,</p>
+      <div class="letter-text" id="letterText"></div>
+      <p class="letter-sign">With so much love,</p>
+      <p class="letter-name-sign">SWORN</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT MAKES HER SPECIAL (replaced) -->
+<section class="section" id="qualities" style="padding-top:3rem">
+  <div class="section-inner">
+    <p class="eyebrow">💜 Why The World Is Better With You In It</p>
+    <h2 class="section-title fade-in">Things Only Oumaima Can Do</h2>
+    <div class="qualities-grid" id="qualGrid"></div>
+  </div>
+</section>
+
+<!-- WISHES WALL -->
+<section class="section" id="wishes">
+  <div class="section-inner">
+    <p class="eyebrow">✨ Birthday Wishes</p>
+    <h2 class="section-title fade-in">Leave Her a Message</h2>
+    <p class="section-sub">Write something sweet — she'll see it today! 🌸</p>
+    <div class="wall-form">
+      <div class="form-group"><label for="wName">Your Name</label><input type="text" id="wName" placeholder="Your name" maxlength="60"/></div>
+      <div class="form-group"><label for="wMsg">Your Wish</label><textarea id="wMsg" rows="4" placeholder="Happy Birthday Oumaima! 🎉" maxlength="400"></textarea></div>
+      <button class="btn-pink" id="wSubmit">Send My Wish 💌</button>
+    </div>
+    <div class="messages-grid" id="messagesGrid"></div>
+  </div>
+</section>
+
+<!-- CANDLE -->
+<section class="section candle-section" id="candle">
+  <div class="section-inner">
+    <p class="eyebrow">🕯️ Light a Candle</p>
+    <h2 class="section-title fade-in">Make a Wish for Her</h2>
+    <p class="section-sub">Light a virtual candle and send your warmest wishes to Oumaima 🌸</p>
+    <div class="candle-stage">
+      <div class="candle-wrap" id="candleWrap">
+        <div class="candle-glow"></div>
+        <div class="candle-flame" id="candleFlame"><div class="flame-inner"></div></div>
+        <div class="candle-body"><div class="candle-drip"></div><div class="candle-wax"></div></div>
+      </div>
+      <button class="btn-candle" id="candleBtn">Light a Candle 🕯️</button>
+      <p class="candle-count"><span id="candleNum">0</span> candles lit for Oumaima 💜</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-emoji">🎀</div>
+    <p class="footer-quote">"May your 24th year be your most beautiful yet."</p>
+    <p class="footer-name">Oumaima · Born June 15, 2002</p>
+    <div class="footer-share">
+    </div>
+    <p class="footer-copy">Made with 💜 especially for you</p>
+  </div>
+
+  <script src="script.js" defer></script>
+</footer>
+</body>
+</html>
